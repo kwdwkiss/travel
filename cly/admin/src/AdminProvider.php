@@ -14,12 +14,16 @@ use Aliyun\Sms;
 use Cly\Admin\Console\Commands\InstallCmd;
 use Cly\Admin\Http\Middleware\JsonSuccessResponse;
 use Cly\Session\SessionGuard;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AdminProvider extends ServiceProvider
 {
     public function boot()
     {
+        //兼容utf8mb4字符编码
+        Schema::defaultStringLength(191);
+
         //console
         if ($this->app->runningInConsole()) {
             //注册命令
