@@ -23,27 +23,34 @@
         </div>
         <div class="card">
             <h5 class="card-header">查询结果</h5>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>类型</th>
-                            <th>名称</th>
-                            <th>操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr v-for="item in dataList.data">
-                            <td>{{item.type_label}}</td>
-                            <td>{{item.name}}</td>
-                            <td>
-                                <button class="btn btn-primary" @click="doDetail(item)">查看详情</button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="card-body border-bottom" v-for="item in dataList.data">
+                <!--<div class="table-responsive">-->
+                <!--<table class="table table-striped table-hover">-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th>类型</th>-->
+                <!--<th>名称</th>-->
+                <!--<th>更新时间</th>-->
+                <!--<th>操作</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--<tr v-for="item in dataList.data">-->
+                <!--<td>{{item.type_label}}</td>-->
+                <!--<td>{{item.name}}</td>-->
+                <!--<td>{{item.created_at}}</td>-->
+                <!--<td>-->
+                <!--<button class="btn btn-primary" @click="doDetail(item)">查看详情</button>-->
+                <!--</td>-->
+                <!--</tr>-->
+                <!--</tbody>-->
+                <!--</table>-->
+                <!--</div>-->
+                <div>名称：{{item.name}}</div>
+                <div>类型：{{item.type_label}}</div>
+                <div>电话：{{item.phone}}</div>
+                <div>地址：{{item.address}}</div>
+                <div>备注：{{item.remark}}</div>
             </div>
         </div>
         <div class="modal detail-modal">

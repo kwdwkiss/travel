@@ -29,10 +29,10 @@ mix
                 }
             ]
         }
-    })
+    });
 
-mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+//mix.js('resources/assets/js/app.js', 'public/js');
+mix.sass('resources/assets/sass/app.scss', 'public/css');
 
 mix.js('cly/admin/resource/assets/js/admin/app.js', 'public/cly_admin/js/admin');
 mix.js('cly/admin/resource/assets/js/index/app.js', 'public/cly_admin/js/index');

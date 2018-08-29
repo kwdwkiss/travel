@@ -13,7 +13,6 @@ use App\Http\Controllers\Controller;
 use Cly\Admin\Exceptions\JsonException;
 use Cly\Admin\Http\Resources\InfoResource;
 use Cly\Admin\Model\Info;
-use Cly\Admin\Model\User;
 
 class InfoController extends Controller
 {
@@ -40,7 +39,7 @@ class InfoController extends Controller
         $name = request('name');
         $address = request('address');
         $remark = request('remark');
-        $content = request('content');
+        $phone = request('phone');
 
         app('taxonomy')->check('info_type', $type);
 
@@ -59,7 +58,7 @@ class InfoController extends Controller
             'name' => $name,
             'address' => $address,
             'remark' => $remark,
-            'content' => $content,
+            'phone' => $phone,
         ]);
 
         return [];

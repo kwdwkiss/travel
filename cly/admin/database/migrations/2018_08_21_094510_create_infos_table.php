@@ -18,8 +18,9 @@ class CreateInfosTable extends Migration
             $table->integer('user_id');
             $table->integer('type');
             $table->string('name');
-            $table->text('content');
             $table->string('address');
+            $table->string('phone');
+            $table->text('content');
             $table->text('remark');
             $table->timestamps();
         });

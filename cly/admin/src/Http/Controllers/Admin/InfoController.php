@@ -38,7 +38,7 @@ class InfoController extends Controller
         $name = request('name');
         $address = request('address');
         $remark = request('remark');
-        $content = request('content');
+        $phone = request('phone');
 
         app('taxonomy')->check('info_type', $type);
 
@@ -47,7 +47,7 @@ class InfoController extends Controller
             'name' => $name,
             'address' => $address,
             'remark' => $remark,
-            'content' => $content,
+            'phone' => $phone,
         ]);
 
         return [];
@@ -69,7 +69,7 @@ class InfoController extends Controller
         $name = request('name');
         $address = request('address');
         $remark = request('remark');
-        $content = request('content');
+        $phone = request('phone');
 
         app('taxonomy')->check('info_type', $type);
 
@@ -80,7 +80,7 @@ class InfoController extends Controller
             'name' => $name,
             'address' => $address,
             'remark' => $remark,
-            'content' => $content,
+            'phone' => $phone,
         ]);
 
         return [];

@@ -18,11 +18,11 @@
                 <el-form-item label="地址" labelWidth="100px">
                     <el-input v-model="form.address"></el-input>
                 </el-form-item>
+                <el-form-item label="电话" labelWidth="100px">
+                    <el-input v-model="form.phone"></el-input>
+                </el-form-item>
                 <el-form-item label="备注" labelWidth="100px">
                     <el-input v-model="form.remark"></el-input>
-                </el-form-item>
-                <el-form-item label="内容" labelWidth="100px">
-                    <el-input v-model="form.content"></el-input>
                 </el-form-item>
                 <el-form-item labelWidth="100px">
                     <el-button type="primary" @click="doReturn">返回</el-button>

@@ -7,7 +7,6 @@
                     <label class="col-md-3 col-form-label text-md-right">类型</label>
                     <div class="col-md-7">
                         <select class="form-control" v-model.number="form.type">
-                            <option disabled value="">请选择类型</option>
                             <option :value="item.id" v-for="item in taxonomy.info_type">{{item.label}}</option>
                         </select>
                     </div>
@@ -27,10 +26,10 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-3 col-form-label text-md-right">内容</label>
+                    <label class="col-md-3 col-form-label text-md-right">电话</label>
                     <div class="col-md-7">
-                            <textarea class="form-control" placeholder="请输入内容"
-                                      v-model="form.content"></textarea>
+                        <input type="text" class="form-control" placeholder="请输入电话"
+                               v-model="form.phone">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -66,6 +65,9 @@
             taxonomy: function () {
                 return this.$store.state.taxonomy;
             },
+        },
+        created: function () {
+            this.form.type = 1;
         },
         methods: {
             doReturn: function () {
