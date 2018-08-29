@@ -21,7 +21,7 @@
                     <li class="nav-item" v-if="!user">
                         <a class="nav-link" href="javascript:" @click="go('register')">注册</a>
                     </li>
-                    <li class="nav-item dropdown ml-auto" v-if="user">
+                    <li class="nav-item dropdown ml-md-auto" v-if="user">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             个人中心

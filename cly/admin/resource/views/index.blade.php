@@ -11,7 +11,7 @@
     <title>桂林旅游行业</title>
 
     <script>
-        window.laravel = JSON.parse('{!! json_encode($laravel) !!}');
+        window.laravel = {!! json_encode($laravel) !!};
     </script>
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">

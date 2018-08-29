@@ -27,5 +27,11 @@ Route::name('admin.')->prefix('admin')->middleware('web')->namespace('Cly\Admin\
         Route::get('/user/detail', 'UserController@detail');
         Route::post('/user/update', 'UserController@update');
         Route::post('/user/delete', 'UserController@delete');
+
+        Route::get('/info/index', 'InfoController@index');
+        Route::post('/info/create', 'InfoController@create');
+        Route::get('/info/detail', 'InfoController@detail');
+        Route::post('/info/update', 'InfoController@update');
+        Route::post('/info/delete', 'InfoController@delete');
     });
 });

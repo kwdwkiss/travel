@@ -40,7 +40,7 @@ class Test extends Command
      */
     public function handle()
     {
-        $data = preg_match(RegExp::PASSWORD, 'caoleiyu27');
+        $data = json_encode(app('taxonomy'));
         dd($data);
     }
 }

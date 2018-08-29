@@ -6,6 +6,7 @@ Vue.use(Vuex);
 const store = window.store = new Vuex.Store({
     state: {
         user: laravel.user,
+        taxonomy: laravel.taxonomy,
     },
     mutations: {
         user(state, payload) {

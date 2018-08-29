@@ -9,6 +9,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="javascript:" @click="go('infoIndex')">资料管理</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="javascript:" @click="go('userIndex')">用户管理</a>
                 </li>
                 <li class="nav-item">
@@ -16,7 +19,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item dropdown ml-auto">
+                <li class="nav-item dropdown ml-md-auto">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         个人中心

@@ -18,7 +18,8 @@ class IndexController extends Controller
     {
         $admin = \Auth::guard('admin')->user();
         $laravel = [
-            'user' => $admin ? new AdminResource($admin) : null
+            'user' => $admin ? new AdminResource($admin) : null,
+            'taxonomy' => app('taxonomy')->toArray(),
         ];
         return view('cly_admin::admin', compact('laravel'));
     }

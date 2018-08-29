@@ -19,5 +19,14 @@ Route::name('index.')->middleware('web')->namespace('Cly\Admin\Http\Controllers\
 
         Route::post('/user/register', 'UserController@register');
         Route::post('/user/forget_password', 'UserController@forgetPassword');
+
+        Route::get('/info/search', 'InfoController@search');
+
+
+        Route::middleware(['auth:user'])->group(function () {
+
+            Route::post('/info/type_in', 'InfoController@typeIn');
+
+        });
     });
 });

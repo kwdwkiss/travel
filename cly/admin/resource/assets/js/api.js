@@ -17,6 +17,12 @@ module.exports = {
     adminUserUpdate: '/admin/user/update',
     adminUserDelete: '/admin/user/delete',
 
+    adminInfoIndex: '/admin/info/index',
+    adminInfoCreate: '/admin/info/create',
+    adminInfoDetail: '/admin/info/detail',
+    adminInfoUpdate: '/admin/info/update',
+    adminInfoDelete: '/admin/info/delete',
+
     //index
     indexIndexLogin: '/index/index/login',
     indexIndexLogout: '/index/index/logout',
@@ -26,4 +32,7 @@ module.exports = {
 
     indexUserRegister: 'index/user/register',
     indexUserForgetPassword: 'index/user/forget_password',
+
+    indexInfoSearch: 'index/info/search',
+    indexInfoTypeIn: 'index/info/type_in',
 };

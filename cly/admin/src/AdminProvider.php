@@ -99,6 +99,10 @@ class AdminProvider extends ServiceProvider
             $oss->setBucket($bucket);
             return $oss;
         });
+
+        $this->app->singleton('taxonomy', function () {
+            return new Taxonomy();
+        });
     }
 
     protected function mergeConfigTo($path, $key)

@@ -13,6 +13,8 @@ const router = new VueRouter({
                 {name: 'login', path: 'login', component: require('./pages/Login')},
                 {name: 'register', path: 'register', component: require('./pages/Register')},
                 {name: 'forget_password', path: 'forget_password', component: require('./pages/ForgetPassword')},
+
+                {name: 'infoTypeIn', path: 'info/type_in', component: require('./pages/InfoTypeIn')},
             ]
         }
     ]

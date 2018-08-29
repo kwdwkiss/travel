@@ -1,5 +1,5 @@
 <template>
-    <div class="card mt-4">
+    <div class="card">
         <h5 class="card-header">更新</h5>
         <div class="card-body">
             <el-form ref="form" :model="form">
