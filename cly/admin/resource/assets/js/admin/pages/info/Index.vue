@@ -91,10 +91,16 @@
             },
             doDelete: function (row) {
                 let self = this;
-                axios.post(self.apiDelete, {id: row.id}).then(function () {
-                    self.$message.success('成功');
-                    self.loadData();
-                });
+                self.$confirm('此操作将永久删除数据, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    axios.post(self.apiDelete, {id: row.id}).then(function () {
+                        self.$message.success('删除成功');
+                        self.loadData();
+                    });
+                }).catch(() => {});
             },
             //self methods
         }
