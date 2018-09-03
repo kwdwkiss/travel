@@ -1,0 +1,7 @@
+##name#_routes#
+Route::get('/#name#/index', '#controller_name#@index');
+Route::post('/#name#/create', '#controller_name#@create');
+Route::get('/#name#/detail', '#controller_name#@detail');
+Route::post('/#name#/update', '#controller_name#@update');
+Route::post('/#name#/delete', '#controller_name#@delete');
+##name#_routes#

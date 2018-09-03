@@ -1,0 +1,50 @@
+<template>
+    <div class="card">
+        <h5 class="card-header">创建</h5>
+        <div class="card-body">
+            <el-form ref="form" :model="form">
+                <el-form-item labelWidth="100px">
+                    <el-button type="primary" @click="doReturn">返回</el-button>
+                    <el-button type="success" @click="doSubmit">提交</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "#createName#",
+        data: function () {
+            return {
+                apiCreate: api.#apiCreate#,
+                routeIndex: '#routeIndex#',
+                form: {},
+            }
+        },
+        computed: {
+            user: function () {
+                return this.$store.state.user;
+            },
+            taxonomy: function () {
+                return this.$store.state.taxonomy;
+            },
+        },
+        methods: {
+            doReturn: function () {
+                this.$router.push({name: this.routeIndex});
+            },
+            doSubmit: function () {
+                let self = this;
+                axios.post(self.apiCreate, self.form).then(function () {
+                    self.$message.success('创建成功');
+                    self.doReturn();
+                });
+            },
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

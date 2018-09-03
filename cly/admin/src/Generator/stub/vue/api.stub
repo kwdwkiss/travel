@@ -1,0 +1,7 @@
+//admin_#name#_api
+admin#route_name#Index: '/admin/#url_name#/index',
+admin#route_name#Create: '/admin/#url_name#/create',
+admin#route_name#Detail: '/admin/#url_name#/detail',
+admin#route_name#Update: '/admin/#url_name#/update',
+admin#route_name#Delete: '/admin/#url_name#/delete',
+//admin_#name#_api

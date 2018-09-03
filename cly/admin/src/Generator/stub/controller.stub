@@ -1,0 +1,58 @@
+<?php
+
+namespace Cly\Admin\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Cly\Admin\Http\Resources\#resource_name#;
+use Cly\Admin\Model\#model_name#;
+
+class #class_name# extends Controller
+{
+    public function index()
+    {
+        $query = #model_name#::query();
+
+        return #resource_name#::collection($query->paginate());
+    }
+
+    public function create()
+    {
+        #model_name#::create([
+
+        ]);
+
+        return [];
+    }
+
+    public function detail()
+    {
+        $id = request('id');
+
+        $model = #model_name#::findOrFail($id);
+
+        return new #resource_name#($model);
+    }
+
+    public function update()
+    {
+        $id = request('id');
+
+        $model = #model_name#::findOrFail($id);
+
+        $model->update([
+        ]);
+
+        return [];
+    }
+
+    public function delete()
+    {
+        $id = request('id');
+
+        $model = #model_name#::findOrFail($id);
+
+        $model->delete();
+
+        return [];
+    }
+}

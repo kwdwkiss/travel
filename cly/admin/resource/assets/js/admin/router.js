@@ -23,6 +23,8 @@ const router = new VueRouter({
                 {name: 'infoIndex', path: 'info', component: require('./pages/info/Index')},
                 {name: 'infoCreate', path: 'info/create', component: require('./pages/info/Create')},
                 {name: 'infoUpdate', path: 'info/update/:id', component: require('./pages/info/Update')},
+
+                //replace_routes
             ]
         },
         {

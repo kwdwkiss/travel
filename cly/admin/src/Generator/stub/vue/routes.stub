@@ -1,0 +1,5 @@
+//#name#_routes
+{name: '#route_name#Index', path: '#path_name#', component: require('./pages/#page_path#/Index')},
+{name: '#route_name#Create', path: '#path_name#/create', component: require('./pages/#page_path#/Create')},
+{name: '#route_name#Update', path: '#path_name#/update/:id', component: require('./pages/#page_path#/Update')},
+//#name#_routes

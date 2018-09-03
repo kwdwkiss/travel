@@ -1,0 +1,15 @@
+<?php
+
+namespace Cly\Admin\Http\Resources;
+
+use Illuminate\Http\Resources\Json\Resource;
+
+class #class_name# extends Resource
+{
+    public function toArray($request)
+    {
+        $data = parent::toArray($request);
+
+        return $data;
+    }
+}

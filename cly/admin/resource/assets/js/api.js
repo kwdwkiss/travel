@@ -23,6 +23,8 @@ module.exports = {
     adminInfoUpdate: '/admin/info/update',
     adminInfoDelete: '/admin/info/delete',
 
+    //replace_api
+
     //index
     indexIndexLogin: '/index/index/login',
     indexIndexLogout: '/index/index/logout',

@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 
 use Cly\Admin\Http\Controllers\Admin\IndexController;
+use Cly\Admin\Model\TestTest;
 use Cly\RegExp\RegExp;
 use Illuminate\Console\Command;
 
@@ -40,7 +41,20 @@ class Test extends Command
      */
     public function handle()
     {
-        $data = json_encode(app('taxonomy'));
-        dd($data);
+        $str = '
+        #abc_abc_routes#
+        Route::get(\'/abc_abc/index\', \'AbcAbcController@index\');
+        Route::post(\'/abc_abc/create\', \'AbcAbcController@create\');
+        Route::get(\'/abc_abc/detail\', \'AbcAbcController@detail\');
+        Route::post(\'/abc_abc/update\', \'AbcAbcController@update\');
+        Route::post(\'/abc_abc/delete\', \'AbcAbcController@delete\');
+        #abc_abc_routes#
+
+        #replace_routes#
+        ';
+
+        $data = preg_replace('/#abc_abc_routes#(.|\n)*#abc_abc_routes#\s*(?=#)/', '', $str);
+        //$data = preg_replace('/#(.|\n)*#/', '', $str);
+        dd($str,$data);
     }
 }

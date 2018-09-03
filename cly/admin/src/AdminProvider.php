@@ -11,6 +11,7 @@ namespace Cly\Admin;
 
 use Aliyun\Oss;
 use Aliyun\Sms;
+use Cly\Admin\Console\Commands\GeneratorCmd;
 use Cly\Admin\Console\Commands\InstallCmd;
 use Cly\Admin\Http\Middleware\JsonSuccessResponse;
 use Cly\Session\SessionGuard;
@@ -28,7 +29,8 @@ class AdminProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             //注册命令
             $this->commands([
-                InstallCmd::class
+                InstallCmd::class,
+                GeneratorCmd::class,
             ]);
         }
 
