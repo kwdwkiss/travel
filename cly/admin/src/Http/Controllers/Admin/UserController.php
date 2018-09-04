@@ -40,6 +40,13 @@ class UserController
             throw new JsonException('密码必须包含字母、数字、符号两种组合且长度为8-16');
         }
 
+        $user = User::query()
+            ->where('mobile', $mobile)
+            ->first();
+        if ($user) {
+            throw new JsonException('手机号已存在');
+        }
+
         User::create([
             'mobile' => $mobile,
             'password' => bcrypt($password)
