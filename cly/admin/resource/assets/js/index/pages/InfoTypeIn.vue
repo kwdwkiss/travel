@@ -35,13 +35,13 @@
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label text-md-right">备注</label>
                     <div class="col-md-7">
-                            <textarea class="form-control" placeholder="请输入备注"
+                            <textarea class="form-control" placeholder="请输入备注" rows="10"
                                       v-model="form.remark"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-md-7 offset-md-3">
-                        <button type="button" class="btn btn-primary" @click="doTypeIn">提交</button>
+                        <button type="button" class="btn btn-primary" @click="doSubmit">提交</button>
                         <button type="button" class="btn btn-dark" @click="doReturn">返回</button>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
             doReturn: function () {
                 this.$router.push({name: 'index'});
             },
-            doTypeIn: function () {
+            doSubmit: function () {
                 let self = this;
                 axios.post(api.indexInfoTypeIn, self.form).then(function () {
                     self.$message.success('资料录入成功');
