@@ -14,7 +14,7 @@
         window.laravel = {!! json_encode($laravel) !!};
     </script>
     <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('cly_admin/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app"></div>

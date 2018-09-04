@@ -32,8 +32,9 @@ mix
     });
 
 //mix.js('resources/assets/js/app.js', 'public/js');
-mix.sass('resources/assets/sass/app.scss', 'public/css');
+//mix.sass('resources/assets/sass/app.scss', 'public/css');
 
+mix.sass('cly/admin/resource/assets/sass/app.scss', 'public/cly_admin/css');
 mix.js('cly/admin/resource/assets/js/admin/app.js', 'public/cly_admin/js/admin');
 mix.js('cly/admin/resource/assets/js/index/app.js', 'public/cly_admin/js/index');
 
